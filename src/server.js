@@ -23,8 +23,7 @@ const handleProtected = (req, res) => {
   return res.send("Welcome to the private lounge.");
 };
 
-app.use(logger);
-app.use(privateMiddleware);
+app.use(logger, privateMiddleware);
 app.get("/", handleHome);
 app.get("/protected", handleProtected);
 
