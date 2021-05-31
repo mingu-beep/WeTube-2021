@@ -1,7 +1,10 @@
 doctype html
 html(lang="kr")
     head
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
         title #{pageTitle} | Wetube
     body 
-        block content
-        include partials/footer.pug
+        main
+            block content
+            button send
+            include partials/footer.pug
