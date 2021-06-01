@@ -4,7 +4,8 @@ html(lang="kr")
         link(rel="stylesheet" href="https://unpkg.com/mvp.css")
         title #{pageTitle} | Wetube
     body 
+        header 
+            h1=pageTitle
         main
             block content
-            button send
-            include partials/footer.pug
+    include partials/footer
