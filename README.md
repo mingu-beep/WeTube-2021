@@ -42,7 +42,7 @@ form(method="POST")
 - form으로 받은 value는 res.body로 받아올 수 있다.
 
   - req.body, 즉 form의 value를 javascript로 바꿔주는 middleware가 필요하다
-  - controller 전에 middleware 필수
+  - server의 router 전에 middleware 필수
     `app.use(express.urlenconded({extended:true}));`
 
 - how back end to handle a post request
