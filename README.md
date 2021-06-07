@@ -51,4 +51,9 @@ form(method="POST")
 1. request가 오면 필요한 녀석을 찾을 때까지 router를 확인한다.
 2. 적절한 router를 찾으면 router안에서 적절한 controller를 탐색한다.
    - 지나가는 길에 middleware(urlencorder)를 만나면 req.body가 생성된다.
-3.
+
+## 프로젝트 시작하기 전
+
+- 우분투 실행시켜서
+  `sudo service mongodb start`
+  - 즉, mongodb 실행시키기
