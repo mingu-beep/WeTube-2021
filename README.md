@@ -27,6 +27,10 @@
 
 - 계속 같은 현상이 반복되서 크롬의 보안 정책상 문제라 판단하고 브라우저를 바꿨다.
 
+210620 : 크롬에서 변경한 브레이브 브라우저에도 같은 현상 발생.
+
+1. 위에 기술한 방법을 실행 후 재부팅 -> 해결
+
 <hr/>
 
 ## HOW TO SEND A DATA TO BACK END
@@ -57,3 +61,7 @@ form(method="POST")
 - 우분투 실행시켜서
   `sudo service mongodb start`
   - 즉, mongodb 실행시키기
+
+## 서버를 실행중인 terminal을 종료시켜 서버를 정상으로 사용할 수 없을 때
+
+- npx kill-port (포트번호)

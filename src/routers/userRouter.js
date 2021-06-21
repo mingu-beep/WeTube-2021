@@ -1,11 +1,25 @@
 import express from "express";
-import { edit, deleteUser, see, logout } from "../controller/userController";
+import {
+  edit,
+  deleteUser,
+  see,
+  logout,
+  getEdit,
+  postEdit,
+  startGithubLogin,
+  finishGithubLogin,
+} from "../controller/userController";
+import { protectorMiddleware, publicOnlyMiddleware } from "../middlewares";
 
 const userRouter = express.Router();
 
-userRouter.get("/logout", logout);
-userRouter.get("/edit", edit);
-userRouter.get("/delete", deleteUser);
+userRouter.get("/logout", protectorMiddleware, logout);
+
+userRouter.get("/github/start", publicOnlyMiddleware, startGithubLogin);
+userRouter.get("/github/finish", publicOnlyMiddleware, finishGithubLogin);
+
+userRouter.route("/edit").all(protectorMiddleware).get(getEdit).post(postEdit);
+
 userRouter.get("/:id", see);
 
 export default userRouter;

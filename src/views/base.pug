@@ -1,5 +1,5 @@
 doctype html
-html(lang="kr")
+html(lang="ko")
     head
         link(rel="stylesheet" href="https://unpkg.com/mvp.css")
         title #{pageTitle} | #{siteName}
@@ -17,9 +17,11 @@ html(lang="kr")
                     li 
                         a(href="/videos/upload") Upload Video
                     li 
-                        a(href="/my-profile") #{loggedInUser.name}의 Profile 
+                        a(href="/my-profile") #{loggedInUser.name}의 Profile
+                    li 
+                        a(href="/users/edit")  Edit-Profile
                     li
-                        a(href="/logout") Log out      
+                        a(href="/users//logout") Log out      
                 else 
                     li 
                         a(href="/join") Join 
@@ -28,4 +30,5 @@ html(lang="kr")
     
         main
             block content
-    include partials/footer
+        include partials/footer
+    block scripts 
