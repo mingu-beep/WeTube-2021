@@ -65,3 +65,15 @@ form(method="POST")
 ## 서버를 실행중인 terminal을 종료시켜 서버를 정상으로 사용할 수 없을 때
 
 - npx kill-port (포트번호)
+
+## Webpakc 폴더별 의미
+
+- assets 폴더 : 브라우저가 접근하여 읽는 파일들을 모아놓은 폴더.
+- src/client 폴더 : webpack이 처리하기 전의 파일들을 모아놓은 폴더.
+
+## frontend 까지 들어왔다
+
+- 프로젝트를 실행시키려면 콘솔을 두개
+
+1. backend용 npm run dev
+2. frontend용 npm run assets
