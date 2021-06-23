@@ -1,4 +1,7 @@
-@import "./_variables";
+@import "./config/variables.scss";
+@import "./config/reset.scss";
+
+@import "./components/header.scss";
 
 body {
   background-color: $red;
