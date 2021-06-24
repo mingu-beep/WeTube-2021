@@ -3,8 +3,8 @@ import User from "../models/User";
 
 export const home = async (req, res) => {
   const videos = await Video.find({})
-  .sort({ createdAt: "desc" })
-  .populate("owner");
+    .sort({ createdAt: "desc" })
+    .populate("owner");
   return res.render("home", { pageTitle: "Home", videos });
 };
 
@@ -14,7 +14,6 @@ export const watch = async (req, res) => {
   if (!video) {
     return res.render("404", { pageTitle: "Video not found." });
   }
-  console.log(video);
   return res.render("watch", { pageTitle: video.title, video });
 };
 

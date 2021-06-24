@@ -77,3 +77,9 @@ form(method="POST")
 
 1. backend용 npm run dev
 2. frontend용 npm run assets
+
+## Bugs
+
+1. videoPlayer.js에서 new Date(seconds \* 1000).toISOString().substr(14,5);
+
+- substr(startIndex,length) -> 내가 원하는 길이보다 원본 길이가 짧을 경우 .0000 으로 모자란 길이만큼 채워진다. 시작 index를 옮겼으면 길이에도 신경쓸것
