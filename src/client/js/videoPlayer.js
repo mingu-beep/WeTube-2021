@@ -28,7 +28,7 @@ video.volume = volumeValue;
 const handlePlayClick = (e) => {
   // if the video is paused, play it
   if (video.paused) {
-    if (playBtnIcon.classList === "fas fa-redo") {
+    if (playBtnIcon.classList === "fas fa-undo") {
       video.currentTime = 0;
     }
     video.play();
