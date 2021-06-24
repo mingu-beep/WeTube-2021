@@ -66,20 +66,28 @@ form(method="POST")
 
 - npx kill-port (포트번호)
 
-## Webpakc 폴더별 의미
+## Webpack 폴더별 의미
 
 - assets 폴더 : 브라우저가 접근하여 읽는 파일들을 모아놓은 폴더.
 - src/client 폴더 : webpack이 처리하기 전의 파일들을 모아놓은 폴더.
 
-## frontend 까지 들어왔다
+## 프로젝트를 실행시 유의사항
 
-- 프로젝트를 실행시키려면 콘솔을 두개
+- 콘솔을 두개 실행시킬 것
 
 1. backend용 npm run dev
 2. frontend용 npm run assets
+
+## API로 요청 보내는 방법
+
+- fetch("요청 보낼 api의 url", {method : "보낼 요청의 종류 (default: get)"})
 
 ## Bugs
 
 1. videoPlayer.js에서 new Date(seconds \* 1000).toISOString().substr(14,5);
 
-- substr(startIndex,length) -> 내가 원하는 길이보다 원본 길이가 짧을 경우 .0000 으로 모자란 길이만큼 채워진다. 시작 index를 옮겼으면 길이에도 신경쓸것
+- substr(startIndex,length) -> 내가 원하는 길이보다 원본 길이가 짧을 경우 .0000 으로 모자란 길이만큼 채워진다. 시작 index를 옮겼으면 길이에도 신경 쓸 것
+
+2. getElementById와 querySelector의 차이
+
+- querySelector는 해당 query 밑에 있는 tag 중 적절한 tag 하나를 찾아 return 해준다.
